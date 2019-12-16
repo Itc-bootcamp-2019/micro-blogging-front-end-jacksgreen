@@ -1,0 +1,28 @@
+body{
+    font-family: Roboto;
+}
+
+.navbar-wrapper{
+    display:flex;
+    align-items: center;
+    background-color: #343A40;
+    margin: 0 182px;
+    border-radius:6px;
+    height:58px;
+}
+
+.navbar-text{
+    display:flex;
+    align-items: center;
+    margin-left:35.87px;
+}
+
+.selected{
+    color:#FFFFFF !important
+}
+
+.nav-text{
+    margin-right:45px;
+    color: rgba(255, 255, 255, 0.5);
+}
+

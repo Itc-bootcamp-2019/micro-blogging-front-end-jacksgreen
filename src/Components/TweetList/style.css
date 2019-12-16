@@ -1,0 +1,25 @@
+.new-tweet-bg{
+    background-color: #343A40;
+    width:600px;
+    height:100px;
+    border-radius:6px;
+    margin-bottom:15px;
+}
+
+.tweet-info{
+    display:flex;
+    margin: 20px 20px 16px 20px;
+    justify-content: space-between
+}
+
+.tweet-info-text{
+    color: #6C757D;
+    font-size: 14px;
+}
+
+.new-tweet-content{
+    color:#FFFFFF;
+    margin-left:20px;
+    font-size: 14px;
+    margin-bottom:20px;
+}

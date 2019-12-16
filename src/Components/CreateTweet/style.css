@@ -1,0 +1,44 @@
+
+.create-tweet-wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-tweet-input-box{
+    width: 556px;    
+    height:146px;
+    margin-top: 47px;
+    font-size: 16px;;
+    font-family: Roboto;
+    background-color: #15202B;
+    color:#CCCCCC;
+    border: 2px solid #CCCCCC;
+    resize:none;
+    outline:none;
+    border-radius:6px;
+    padding: 16px 20px;
+}
+
+.create-tweet-input-box::placeholder{
+    color:#CCCCCC;
+}
+
+.input-box-wrapper{
+    position: relative;
+    margin-bottom:20px;
+}
+
+.create-tweet-wrapper button{
+    position: absolute;
+    bottom:20px;
+    right:10px;
+    width:68px;
+    height:34px;
+    border-radius: 4px;
+    background: #007BFF;
+    font-size:16px;
+    color:#FFFFFF;
+    font-family: Roboto;
+    border:none;
+}
