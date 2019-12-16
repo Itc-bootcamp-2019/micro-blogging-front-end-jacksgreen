@@ -29,7 +29,7 @@
     margin-bottom:20px;
 }
 
-.create-tweet-wrapper button{
+.submit-tweet-btn{
     position: absolute;
     bottom:20px;
     right:10px;
@@ -41,4 +41,8 @@
     color:#FFFFFF;
     font-family: Roboto;
     border:none;
+}
+
+.disabled-tweet-btn{
+ background: rgb(133, 130, 130);   
 }
