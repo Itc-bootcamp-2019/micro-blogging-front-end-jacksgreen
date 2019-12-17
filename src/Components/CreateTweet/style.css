@@ -1,81 +1,90 @@
-
-.create-tweet-wrapper{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+.create-tweet-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#create-tweet-input-box{
-    width: 556px;    
-    height:146px;
-    margin-top: 47px;
-    font-size: 16px;;
-    font-family: Roboto;
-    background-color: #15202B;
-    color:#CCCCCC;
-    border: 2px solid #CCCCCC;
-    resize:none;
-    outline:none;
-    border-radius:6px;
-    padding: 16px 20px;
+#create-tweet-input-box {
+  width: 556px;
+  height: 146px;
+  margin-top: 47px;
+  font-size: 16px;
+  font-family: Roboto;
+  background-color: #15202b;
+  color: #cccccc;
+  border: 2px solid #cccccc;
+  resize: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 16px 20px;
 }
 
-.create-tweet-input-box::placeholder{
-    color:#CCCCCC;
+.create-tweet-input-box::placeholder {
+  color: #cccccc;
 }
 
-.input-box-wrapper{
-    position: relative;
-    margin-bottom:20px;
+.input-box-wrapper {
+  position: relative;
+  margin-bottom: 20px;
 }
 
-.submit-tweet-btn{
-    position: absolute;
-    bottom:20px;
-    right:10px;
-    width:68px;
-    height:34px;
-    border-radius: 4px;
-    background: #007BFF;
-    font-size:16px;
-    color:#FFFFFF;
-    font-family: Roboto;
-    border:none;
-    cursor: pointer;
+#submit-tweet-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  width: 68px;
+  height: 34px;
+  border-radius: 4px;
+  background: #007bff;
+  font-size: 16px;
+  color: #ffffff;
+  font-family: Roboto;
+  border: none;
+  cursor: pointer;
 }
 
-.disabled-tweet-btn{
- background: rgb(133, 130, 130);   
+#disabled-tweet-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  width: 68px;
+  height: 34px;
+  border-radius: 4px;
+  background: rgb(133, 130, 130);
+  font-size: 16px;
+  color: #ffffff;
+  font-family: Roboto;
+  border: none;
+  cursor: pointer;
 }
 
-.error-wrap{
-    /* display:flex; */
-    position: absolute;
-    width:auto;
-    justify-content: space-between;
-    margin: 0 10px 0 20px;
-    bottom:27px;
+.error-wrap {
+  /* display:flex; */
+  position: absolute;
+  width: auto;
+  justify-content: space-between;
+  margin: 0 10px 0 20px;
+  bottom: 27px;
 }
 
-
-.error-text{
-    background-color: #F8D7DA;
-    border-radius: 4px;
-    font-size: 16px;
-    padding: 7px 4px;
+.error-text {
+  background-color: #f8d7da;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 7px 4px;
 }
 
-.outer-wrap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+.outer-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.loading{
-    width:50px;
-    height:50px;
-    background-image: url('../../images/spinner.gif');
-    background-position: center;
-    background-size: contain;
+.loading {
+  width: 50px;
+  height: 50px;
+  background-image: url("../../images/spinner.gif");
+  background-position: center;
+  background-size: contain;
 }

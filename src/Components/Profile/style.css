@@ -1,0 +1,48 @@
+.profile-wrapper{
+    display:flex;
+    flex-direction: column;
+    margin-top:52px;
+    margin-left:370px;
+    color:white;
+}
+
+.profile-header{
+    font-size:36px;
+}
+
+.profile-username{
+    margin-top:26px;
+    font-size: 18px;
+}
+
+.profile-input-border{
+    margin-top:6px;
+    border: 2px solid #CCCCCC;
+    border-radius: 6px;
+    width:600px;
+    height:61px;
+}
+
+.profile-input{
+    resize: none;
+    background-color: #15202B;
+    border: none;
+    outline:none;
+    color: #FFFFFF;
+    font-size:16px;
+    margin-top:20px;
+    margin-left:16px;
+}
+
+.profile-save{
+    margin-left: 522px;
+    height:34px;
+    width: 68px;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #FFFFFF;
+    font-family: roboto;
+    font-size:16px;
+    margin-top:18px;
+    border:none;
+}

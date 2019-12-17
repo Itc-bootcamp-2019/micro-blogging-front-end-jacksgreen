@@ -9,7 +9,7 @@ class CreateTweet extends React.Component {
         this.state = {
             tweetList: [],
             newTweet: '',
-            loading: false
+            loading: true,
         }
     }
 
@@ -22,17 +22,13 @@ class CreateTweet extends React.Component {
         const { newTweet, tweetList } = this.state
         let dateCreated = new Date()
         dateCreated = dateCreated.toISOString()
+        let profile = localStorage.getItem('profile');
+        profile = JSON.parse(profile);
         let tweetObj = {
             content: newTweet,
-            userName: 'gabe',
+            userName: profile,
             date: dateCreated,
         }
-        // const tweetArray = [tweetObj, ...tweetList];
-        // this.setState({
-        //     tweetList: tweetArray
-        // })
-        // localStorage.setItem('tweetList', JSON.stringify(tweetArray))
-
         this.pushTweetToServer(tweetObj)
         this.clearInputBox()
 
@@ -42,7 +38,7 @@ class CreateTweet extends React.Component {
         try {
             this.setState({ loading: true });
             await postTweet(obj);
-            this.handleTweets();
+            this.getTweets();
         } catch (e) {
             console.log(e)
         }
@@ -53,19 +49,19 @@ class CreateTweet extends React.Component {
     }
 
     componentDidMount() {
-        // let savedTweetList = localStorage.getItem('tweetList');
-        // savedTweetList = JSON.parse(savedTweetList);
-        // this.setState({tweetList: savedTweetList})
-        this.handleTweets()
+        this.getTweets()
+        document.getElementById('homeButton').classList.add('selected');
+        document.getElementById('profileButton').classList.remove('selected');
+
     }
 
-    handleTweets = async () => {
+    getTweets = async () => {
         const savedTweetList = await getListOfTweets();
         this.setState({ tweetList: savedTweetList.data.tweets, loading: false})
     }
 
     render() {
-        const { tweetList, newTweet, loading } = this.state
+        const { tweetList, newTweet, loading, charMax } = this.state
 
         return (
             <div className="outer-wrap">
@@ -73,8 +69,8 @@ class CreateTweet extends React.Component {
                 {!loading && <div className='create-tweet-wrapper'>
                     <div className='input-box-wrapper'>
                         <textarea onChange={(event) => this.onTweetChange(event)} id='create-tweet-input-box' placeholder='What do you have in mind?'></textarea>
-                        {newTweet.length <= 140 && <button className="submit-tweet-btn" onClick={() => this.onPublishTweet()}>Tweet</button>}
-                        {newTweet.length > 140 && <button disabled className="submit-tweet-btn disabled-tweet-btn">Tweet</button>}
+                        {newTweet.length <= 140 && <button disabled={charMax} id="submit-tweet-btn" onClick={() => this.onPublishTweet()}>Tweet</button>}
+                        {newTweet.length > 140 && <button disabled  id="disabled-tweet-btn">Tweet</button>}
                     </div>
                     <TweetList tweetList={tweetList} />
                 </div>}

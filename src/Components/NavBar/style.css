@@ -24,6 +24,7 @@ body{
 .nav-text{
     margin-right:45px;
     color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
 }
 
 .nav-text:hover{
