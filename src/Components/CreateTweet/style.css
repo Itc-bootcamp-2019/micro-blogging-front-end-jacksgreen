@@ -5,7 +5,7 @@
     align-items: center;
 }
 
-.create-tweet-input-box{
+#create-tweet-input-box{
     width: 556px;    
     height:146px;
     margin-top: 47px;
@@ -41,8 +41,26 @@
     color:#FFFFFF;
     font-family: Roboto;
     border:none;
+    cursor: pointer;
 }
 
 .disabled-tweet-btn{
  background: rgb(133, 130, 130);   
+}
+
+.error-wrap{
+    /* display:flex; */
+    position: absolute;
+    width:auto;
+    justify-content: space-between;
+    margin: 0 10px 0 20px;
+    bottom:27px;
+}
+
+
+.error-text{
+    background-color: #F8D7DA;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 7px 4px;
 }
