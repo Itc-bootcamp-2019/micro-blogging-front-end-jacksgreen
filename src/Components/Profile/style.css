@@ -55,3 +55,12 @@
     color: #FFFFFF;
     margin-left:10px;
 }
+
+.profile-username-error {
+    background: #cccccc;
+    position: absolute;
+    margin-left: 8px;
+    padding:6px;
+    border-radius: 0 0 4px 4px;
+    color: red;
+  }

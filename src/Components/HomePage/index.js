@@ -10,7 +10,7 @@ class HomePage extends React.Component {
       tweetList: [],
       newTweet: "",
       loading: true,
-      inputBox: '',
+      validUserName: false,
     };
   }
 
@@ -19,11 +19,15 @@ class HomePage extends React.Component {
   }
 
   onPublishTweet() {
-    const { newTweet, tweetList } = this.state;
+    const { newTweet, tweetList, validUserName } = this.state;
     let dateCreated = new Date();
     dateCreated = dateCreated.toISOString();
     let profile = localStorage.getItem("profile");
     profile = JSON.parse(profile);
+    if (!validUserName){
+      console.log('nope')
+      return
+    }
     let tweetObj = {
       content: newTweet,
       userName: profile,
@@ -49,6 +53,11 @@ class HomePage extends React.Component {
   componentDidMount() {
     this.getTweets();
     setInterval(() => this.getTweets(), 10000);
+    let profile = localStorage.getItem("profile");
+    profile = JSON.parse(profile);
+    if (profile.length > 0){
+      this.setState({validUserName: true})
+    }
   }
 
   getTweets = async () => {
@@ -57,7 +66,7 @@ class HomePage extends React.Component {
   };
 
   render() {
-    const { tweetList, newTweet, loading, charMax } = this.state;
+    const { tweetList, newTweet, loading, charMax, validUserName } = this.state;
 
     let error = (
       <div>
@@ -82,7 +91,7 @@ class HomePage extends React.Component {
                 id="create-tweet-input-box"
                 placeholder="What do you have in mind?"
               ></textarea>
-
+              { !validUserName && <div className='username-error'>Please set a valid username</div>}
               {newTweet.length <= 140 && (
                 <button
                   disabled={charMax}

@@ -6,24 +6,42 @@ class Profile extends React.Component {
     super(props);
     this.state = {
       profile: "",
-      changeProfile: false
+      changeProfile: false,
+      validUserName: false
     };
   }
 
   onProfileChange(event) {
-    this.setState({ profile: event.target.value });
+      this.setState({ profile: event.target.value });
   }
 
   setProfile() {
-    localStorage.setItem("profile", JSON.stringify(this.state.profile));
-    this.setState({ changeProfile: true });
-    setTimeout(() => {
-      this.setState({ changeProfile: false });
-    }, 1000);
+    const { profile } = this.state
+    if (profile.length > 0){
+      this.setState({validUserName: true})
+      localStorage.setItem("profile", JSON.stringify(profile));
+      this.setState({ changeProfile: true });
+      setTimeout(() => {
+        this.setState({ changeProfile: false });
+      }, 1000);
+    } else {
+      localStorage.setItem("profile", JSON.stringify(profile));
+      this.setState({validUserName: false})
+    }
+  }
+
+  componentDidMount(){
+    let profile = localStorage.getItem("profile");
+    profile = JSON.parse(profile);
+    if (profile.length > 0){
+      this.setState({validUserName: true})
+    } else {
+      this.setState({validUserName: false})
+    }
   }
   
   render() {
-    const { changeProfile } = this.state;
+    const { changeProfile, validUserName } = this.state;
     let profile = localStorage.getItem("profile");
     profile = JSON.parse(profile);
     return (
@@ -37,6 +55,7 @@ class Profile extends React.Component {
               placeholder={profile}
               className="profile-input"
             ></textarea>
+            { !validUserName && <div className='profile-username-error'>Please set a valid username</div>}
             {changeProfile && (
               <div className="updated-username">Username updated</div>
             )}

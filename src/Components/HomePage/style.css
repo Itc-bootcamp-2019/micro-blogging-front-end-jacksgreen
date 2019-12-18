@@ -5,17 +5,16 @@
 }
 
 #create-tweet-input-box {
-  border:none;
+  border: none;
   margin-top: 20px;
   margin-left: 16px;
   font-size: 16px;
-  width:inherit;
+  width: inherit;
   font-family: Roboto;
   background-color: #15202b;
   color: #cccccc;
   resize: none;
   outline: none;
-  
 }
 
 .create-tweet-input-box::placeholder {
@@ -25,11 +24,11 @@
 .input-box-wrapper {
   display: flex;
   position: relative;
-  margin-top:47px;
+  margin-top: 47px;
   margin-bottom: 20px;
   border: 2px solid #cccccc;
-  height:180px;
-  width:600px;
+  height: 180px;
+  width: 600px;
   border-radius: 6px;
 }
 
@@ -75,12 +74,12 @@
 .error-text {
   position: absolute;
   bottom: 27px;
-  left:20px;
+  left: 20px;
   background-color: #f8d7da;
   border-radius: 4px;
   font-size: 16px;
   padding: 7px 4px;
-  color: #721C24
+  color: #721c24;
 }
 
 .outer-wrap {
@@ -96,4 +95,14 @@
   background-image: url("../../images/spinner.gif");
   background-position: center;
   background-size: contain;
+}
+
+.username-error {
+  background: #cccccc;
+  position: absolute;
+  left:30px;
+  bottom:0px;
+  padding:6px;
+  border-radius: 4px 4px 0 0;
+  color: red;
 }
