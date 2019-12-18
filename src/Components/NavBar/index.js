@@ -12,7 +12,7 @@ class NavBar extends React.Component {
     return (
       <div className="navbar-wrapper">
         <div className="navbar-text">
-          <NavLink to="/home" className="nav-text" id="homeButton" activeClassName='selected'>
+          <NavLink to="/" className="nav-text" id="homeButton" activeClassName='selected'>
             Home
           </NavLink>
           <NavLink to="/profile" className="nav-text" id="profileButton" activeClassName='selected'>
