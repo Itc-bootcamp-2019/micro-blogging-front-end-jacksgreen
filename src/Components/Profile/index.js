@@ -21,12 +21,6 @@ class Profile extends React.Component {
       this.setState({ changeProfile: false });
     }, 1000);
   }
-
-  componentDidMount() {
-    document.getElementById("homeButton").classList.remove("selected");
-    document.getElementById("profileButton").classList.add("selected");
-  }
-
   
   render() {
     const { changeProfile } = this.state;

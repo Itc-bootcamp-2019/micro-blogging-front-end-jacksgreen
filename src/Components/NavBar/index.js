@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./style.css";
 
 class NavBar extends React.Component {
@@ -12,12 +12,12 @@ class NavBar extends React.Component {
     return (
       <div className="navbar-wrapper">
         <div className="navbar-text">
-          <Link to="/" className="nav-text selected" id="homeButton">
+          <NavLink to="/home" className="nav-text" id="homeButton" activeClassName='selected'>
             Home
-          </Link>
-          <Link to="/profile" className="nav-text" id="profileButton">
+          </NavLink>
+          <NavLink to="/profile" className="nav-text" id="profileButton" activeClassName='selected'>
             Profile
-          </Link>
+          </NavLink>
         </div>
       </div>
     );

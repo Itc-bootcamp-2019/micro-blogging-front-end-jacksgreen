@@ -9,7 +9,8 @@ class HomePage extends React.Component {
     this.state = {
       tweetList: [],
       newTweet: "",
-      loading: true
+      loading: true,
+      inputBox: '',
     };
   }
 
@@ -48,8 +49,6 @@ class HomePage extends React.Component {
   componentDidMount() {
     this.getTweets();
     setInterval(() => this.getTweets(), 10000);
-    document.getElementById("homeButton").classList.add("selected");
-    document.getElementById("profileButton").classList.remove("selected");
   }
 
   getTweets = async () => {
