@@ -12,18 +12,10 @@ class NavBar extends React.Component {
     return (
       <div className="navbar-wrapper">
         <div className="navbar-text">
-          <Link
-            to="/"
-            className="nav-text selected"
-            id='homeButton'
-          >
+          <Link to="/" className="nav-text selected" id="homeButton">
             Home
           </Link>
-          <Link 
-          to="/profile" 
-          className="nav-text"
-          id='profileButton'
-          >
+          <Link to="/profile" className="nav-text" id="profileButton">
             Profile
           </Link>
         </div>

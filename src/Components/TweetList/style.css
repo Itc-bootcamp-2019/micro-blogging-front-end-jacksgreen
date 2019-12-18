@@ -19,7 +19,7 @@
 
 .new-tweet-content{
     color:#FFFFFF;
-    margin-left:20px;
+    margin: 0 20px 20px 20px;
     font-size: 14px;
-    margin-bottom:20px;
+    overflow-wrap: break-word;
 }

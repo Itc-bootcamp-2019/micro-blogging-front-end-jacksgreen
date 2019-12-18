@@ -5,18 +5,17 @@
 }
 
 #create-tweet-input-box {
-  width: 556px;
-  height: 146px;
-  margin-top: 47px;
+  border:none;
+  margin-top: 20px;
+  margin-left: 16px;
   font-size: 16px;
+  width:inherit;
   font-family: Roboto;
   background-color: #15202b;
   color: #cccccc;
-  border: 2px solid #cccccc;
   resize: none;
   outline: none;
-  border-radius: 6px;
-  padding: 16px 20px;
+  
 }
 
 .create-tweet-input-box::placeholder {
@@ -24,8 +23,14 @@
 }
 
 .input-box-wrapper {
+  display: flex;
   position: relative;
+  margin-top:47px;
   margin-bottom: 20px;
+  border: 2px solid #cccccc;
+  height:180px;
+  width:600px;
+  border-radius: 6px;
 }
 
 #submit-tweet-btn {
@@ -68,10 +73,14 @@
 }
 
 .error-text {
+  position: absolute;
+  bottom: 27px;
+  left:20px;
   background-color: #f8d7da;
   border-radius: 4px;
   font-size: 16px;
   padding: 7px 4px;
+  color: #721C24
 }
 
 .outer-wrap {

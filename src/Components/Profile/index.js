@@ -5,7 +5,8 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      profile: ""
+      profile: "",
+      changeProfile: false
     };
   }
 
@@ -15,6 +16,10 @@ class Profile extends React.Component {
 
   setProfile() {
     localStorage.setItem("profile", JSON.stringify(this.state.profile));
+    this.setState({ changeProfile: true });
+    setTimeout(() => {
+      this.setState({ changeProfile: false });
+    }, 1000);
   }
 
   componentDidMount() {
@@ -22,7 +27,11 @@ class Profile extends React.Component {
     document.getElementById("profileButton").classList.add("selected");
   }
 
+  
   render() {
+    const { changeProfile } = this.state;
+    let profile = localStorage.getItem("profile");
+    profile = JSON.parse(profile);
     return (
       <div className="profile-wrapper">
         <div className="profile-header">Profile</div>
@@ -31,9 +40,12 @@ class Profile extends React.Component {
           <div className="profile-input-border">
             <textarea
               onChange={event => this.onProfileChange(event)}
-              placeholder="username"
+              placeholder={profile}
               className="profile-input"
             ></textarea>
+            {changeProfile && (
+              <div className="updated-username">Username updated</div>
+            )}
           </div>
           <button onClick={() => this.setProfile()} className="profile-save">
             Save

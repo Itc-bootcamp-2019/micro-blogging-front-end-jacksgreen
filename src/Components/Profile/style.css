@@ -46,3 +46,12 @@
     margin-top:18px;
     border:none;
 }
+
+.updated-username{
+    background: #343A40;
+    border-radius:0 0 4px 4px;
+    padding:4px 10px;
+    width: fit-content;
+    color: #FFFFFF;
+    margin-left:10px;
+}
