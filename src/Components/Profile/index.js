@@ -7,7 +7,7 @@ class Profile extends React.Component {
     this.state = {
       profile: "",
       changeProfile: false,
-      validUserName: false
+      validUserName: true
     };
   }
 
@@ -26,16 +26,6 @@ class Profile extends React.Component {
       }, 1000);
     } else {
       localStorage.setItem("profile", JSON.stringify(profile));
-      this.setState({validUserName: false})
-    }
-  }
-
-  componentDidMount(){
-    let profile = localStorage.getItem("profile");
-    profile = JSON.parse(profile);
-    if (profile.length > 0){
-      this.setState({validUserName: true})
-    } else {
       this.setState({validUserName: false})
     }
   }

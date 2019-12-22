@@ -2,8 +2,9 @@ import React from "react";
 import "./App.css";
 import NavBar from "./Components/NavBar";
 import Profile from "./Components/Profile";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./Components/HomePage";
+import FirebaseHomePage from "./Components/FirebaseHomePage";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         
         <Switch>
           <Route exact path="/">
-            <HomePage />
+            {/* <HomePage /> */}
+            <FirebaseHomePage />
           </Route>
           <Route path="/profile">
             <Profile />
