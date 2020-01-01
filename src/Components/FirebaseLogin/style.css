@@ -1,0 +1,42 @@
+body {
+  color: white;
+}
+
+.login-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.sign-in-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-out-button {
+  border-radius: 4px;
+  background: #007bff;
+  font-size: 16px;
+  color: #ffffff;
+  font-family: Roboto;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+.welcome-text {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.sign-in-image {
+  border-radius: 4px;
+  height: 150px;
+  width: 150px;
+}
